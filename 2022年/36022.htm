@@ -1,0 +1,53 @@
+<HTML><HEAD><title>给你们科普一下工业软件的难度 (转载)</title><meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<STYLE type=text/css media=screen>
+body {
+font-family: SimSun;
+background-color:#000000;
+color: #c0c0c0;
+}
+</STYLE>
+</HEAD>
+<BODY link="#0099CC" vlink="#00CCCC" alink="#CCFF00">
+<span style="letter-spacing: 0pt;line-height: 1">
+发信人:&nbsp;AaYaYa&nbsp;(啊呀呀*选帝侯初长成),&nbsp;信区:&nbsp;SimulateFlight<br>
+标&nbsp;&nbsp;题:&nbsp;给你们科普一下工业软件的难度 (转载)<br>
+发信站:&nbsp;水木社区&nbsp;(Mon&nbsp;Apr&nbsp;25&nbsp;12:21:12&nbsp;2022),&nbsp;站内<br>
+&nbsp;<br>
+【&nbsp;以下文字转载自&nbsp;ITExpress&nbsp;讨论区&nbsp;】<br>
+发信人:&nbsp;chaobill&nbsp;(若我离去,后会无期),&nbsp;信区:&nbsp;ITExpress<br>
+标&nbsp;&nbsp;题:&nbsp;给你们科普一下工业软件的难度<br>
+发信站:&nbsp;水木社区&nbsp;(Sun&nbsp;Apr&nbsp;24&nbsp;22:38:49&nbsp;2022),&nbsp;站内<br>
+&nbsp;<br>
+发信人:&nbsp;xieyf&nbsp;(绿蚁新醅酒，红泥小火炉),&nbsp;信区:&nbsp;WorkLife<br>
+标&nbsp;&nbsp;题:&nbsp;给你们科普一下工业软件的难度<br>
+发信站:&nbsp;水木社区&nbsp;(Sun&nbsp;Apr&nbsp;24&nbsp;22:38:49&nbsp;2022),&nbsp;站内<br>
+&nbsp;<br>
+目前国内互联网有钱是有钱, 但不要以为靠卖广告, 卖菜, 搞搞游戏能挣钱真的就是自己技术水平高, 那是人口红利, 跟你的技术水平关系不大.<br>
+&nbsp;<br>
+给你们科普下工业软件开发的具体难度吧. 工软大致分那么几个方向, 流体, 结构, 电磁方面的场仿真工具, 一般就是CFD, CSD,计算电磁学了, 这些都属于CAE领域.  随便一个方向,比如lz深耕的CFD方向,你想干出一个nb的软件,比如超越fluent, starcd的这种,那么你需要<br>
+&nbsp;<br>
+&nbsp;&nbsp;--&nbsp;nb无上的流体力学知识,&nbsp;怎么也得各种流体理论烂熟于胸,否则你怎么确定你算的合理,否则你怎么根据物理现象提出新方法,&nbsp;要是没干过流体工程比如气动设计,涡轮设计,&nbsp;航天设计,&nbsp;根本不可能积累出流体力学的经验,&nbsp;也不可能干出流体软件来.<br>
+&nbsp;&nbsp;--&nbsp;nb无上的计算流体力学知识,&nbsp;看到没有,&nbsp;计算和流体合在一起,&nbsp;那就是一门新的学科,&nbsp;有的是人干一辈子也就研究几个格式而已,&nbsp;cray数学研究所悬赏的7大数学难题之一,&nbsp;navier-stoks方程的解,&nbsp;干废了多少数学家,&nbsp;即便是想搞个数值解,&nbsp;也有的是数值不稳定性来折腾人.&nbsp;好多干ns方程数值解的人,&nbsp;干不下去,&nbsp;转行搞金融数学,&nbsp;搞AI,&nbsp;随便搞搞都是秒杀一堆调参员.&nbsp;我有个小弟,&nbsp;c++都跟我学的,&nbsp;搞数值计算搞不下去,&nbsp;后来到互联网混的风生水起,&nbsp;这是为什么,&nbsp;因为AI那点数学真不够看的.<br>
+何况他也不用看,&nbsp;反正洋人给我们都"服务"到位了,都在github上摆着呢.<br>
+<br>
+&nbsp;&nbsp;--&nbsp;nb无上的计算机编程能力,&nbsp;什么win32,&nbsp;linux内核,&nbsp;高性能并行计算你都得懂.&nbsp;如果自己想搞点界面,QT,&nbsp;OpenGL那是少不了的,&nbsp;我周围做计算流软件的,&nbsp;几乎都是全能手.<br>
+&nbsp;&nbsp;这些东西,&nbsp;随便拿一个方向出来,&nbsp;都够互联网的crudboy喝上一辈子.&nbsp;<br>
+&nbsp;&nbsp;前段时间,&nbsp;lz为了搞一个高性能的数据存储格式,处理流体里边的海量数据,&nbsp;愣是手撸线程池和软件流水线,&nbsp;将流场数据的磁盘IO提升到1.5GB~5GB的水平,&nbsp;因为开源没有现成的.&nbsp;因为互联网的业务都是水平扩展的,&nbsp;一台机器不够,&nbsp;就十台机器,&nbsp;10台不够,&nbsp;那就10万台.&nbsp;CAE里边的东西能水平扩展吗?&nbsp;太多不能的,&nbsp;因此你就得在性能上,&nbsp;精度,&nbsp;甚至软件工程上死磕.<br>
+<br>
+&nbsp;&nbsp;为了高性能计算,&nbsp;模板,&nbsp;ctrp都得懂,还想要代码更多的触发SSE,&nbsp;AVX指令你还得懂计算机硬件,&nbsp;为了代码能成就大工程,你还得懂各种patterns.&nbsp;呵呵,&nbsp;就这些工业软件一点附带要求,&nbsp;都超越好多所谓"前端"工程师了.&nbsp;国内有个神僧在搞miniblink,&nbsp;从排版一直干到图形接口,&nbsp;最后干到上屏,&nbsp;我觉得那才叫真正nb的前端,&nbsp;其他的什么写js的,&nbsp;写css,&nbsp;写html的前端就不要往上凑了.<br>
+<br>
+&nbsp;&nbsp;数值的艰难之处在于,&nbsp;理论值是1.0,&nbsp;你算出0.99999,&nbsp;你说你算的对不对?&nbsp;你要不要反复求证?&nbsp;这种艰难,&nbsp;根本不是互联网的crudboy能理解,&nbsp;互连网的业务几乎都是逻辑业务,&nbsp;1就是1,&nbsp;0就是0,&nbsp;对错很容易,&nbsp;debug也很容易.<br>
+<br>
+还有一个领域叫CAD,&nbsp;就是三维造型的.<br>
+--<br>
+&nbsp;<br>
+<font color="#808000" >※&nbsp;来源:·水木社区&nbsp;http://www.mysmth.net·[FROM:&nbsp;24.6.47.*]</font><br>
+<font color="#02A39D" >有<font color="#A5A502" >4</font>位用户评价了这篇文章</font><br>
+[<font color="#A50202" >&nbsp;</font>] <font color="#A5A502" >donkeymeat</font>: 鄙视这个鄙视那个，有点做技术的人的素养吗<br>
+[<font color="#A50202" >&nbsp;</font>] <font color="#A5A502" >morrischen12</font>: 本质还是这个行业赚不到钱，吸引不了有能力的人<br>
+[<font color="#A50202" >&nbsp;</font>] <font color="#A5A502" >jackak</font>: 困难是事实，但是向困难磕头，是解决不了困难的<br>
+[<font color="#A50202" >+5</font>] <font color="#A5A502" >fcwrao</font>: 工业软件就是软件行业皇冠上的明珠，可惜很多人不懂<br>
+<P ALIGN="center"><font size="2" color="#FFFFFF">
+<a href="index-2022.htm">索引页面</a> | <a href="36021.htm">上一篇</a> | <a href="36023.htm">下一篇</a>
+</font></P></span></BODY>
+</HTML>
